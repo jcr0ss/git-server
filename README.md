@@ -79,6 +79,97 @@ or
 ip addr
 ```
 
+## Using the Git Server
+
+Once you have set up the Git server and configured your clients, here's how to perform common Git operations:
+
+### Initial Setup for a New Project
+
+1. Create a local repository or use an existing one:
+```
+mkdir my-project
+cd my-project
+git init
+```
+
+2. Add your remote Git server:
+```
+git remote add origin http://YOUR_LOCAL_IP:PORT/my-project
+```
+
+3. Create some initial content:
+```
+echo "# My Project" > README.md
+```
+
+### Common Git Operations
+
+#### Checking Status
+```
+git status
+```
+This shows which files are modified, staged, or untracked.
+
+#### Adding Files
+```
+git add .                   # Add all files
+git add README.md           # Add specific file
+```
+
+#### Committing Changes
+```
+git commit -m "Initial commit"
+```
+
+#### Pushing to the Server
+For the first push to a new repository:
+```
+git push -u origin master   # or 'main' depending on your branch name
+```
+
+For subsequent pushes:
+```
+git push
+```
+
+#### Pulling Latest Changes
+```
+git pull
+```
+
+#### Fetching Updates Without Merging
+```
+git fetch
+```
+
+#### Cloning a Repository
+To clone a repository from your Git server:
+```
+git clone http://YOUR_LOCAL_IP:PORT/my-project
+```
+
+#### Checking Commit History
+```
+git log
+```
+
+### Working with Branches
+
+#### Creating a Branch
+```
+git checkout -b feature-branch
+```
+
+#### Switching Branches
+```
+git checkout master   # or any other branch name
+```
+
+#### Pushing a New Branch
+```
+git push -u origin feature-branch
+```
+
 ## Troubleshooting
 
 - Make sure your firewall allows connections on the configured port
