@@ -1,0 +1,11 @@
+{
+  "name": "git-http-server",
+  "version": "1.0.0",
+  "dependencies": {
+    "git-http-backend": "^1.0.1",
+    "http": "0.0.1-security",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "dotenv": "^16.0.3"
+  }
+}
